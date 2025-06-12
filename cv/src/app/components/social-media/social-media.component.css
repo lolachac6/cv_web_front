@@ -1,0 +1,19 @@
+.w-list{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 65%;
+  
+
+}
+
+.list{
+  text-decoration:none;
+  list-style: none;
+  display:flex;
+  gap: 10px;
+  flex-direction:bottom;
+  padding-left:10px;
+  margin-left:10px;
+  
+}
