@@ -126,12 +126,17 @@ font-size: 6rem;
   .img-card {
     width: 120px;
     height: 120px;
+    display:none;
     
   }
   .first-part,
   .second-part {
     padding: 6px;
     min-height: 200px;
+  }
+  .text-card{
+    display:flex;
+    justify-content:flex-start;
   }
   .short-line {
    visibility:hidden;
