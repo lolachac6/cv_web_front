@@ -30,32 +30,4 @@
     
 }
 
-.skill-progress-content{
-   color:yellow;
-    
-    
-}
-.skill-progress-language-value{
-    display:flex;
-    flex-direction:row;
-    justify-content:space-between;
-    margin-bottom:2 px;
-    
-    padding: 10px 0px 3px 0px;
-    
-}
-
-.skill-progress-language{
-    font-size: 1.2rem;      
-    margin:0px;
-    padding:0px;
-}
-
-.skill-progress-value{
-    color:aqua;
-font-size: 1rem;      
-    font-weight:bolder;
-    margin:0px;
-    padding:10px  0px 10px 10px;
-}
 
