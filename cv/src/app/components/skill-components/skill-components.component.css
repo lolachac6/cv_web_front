@@ -13,21 +13,106 @@
     text-align:center;
     
 }
+.title {
+  font-size: 6rem;
+  font-weight: bold;
+ color: #fff200;
+  text-shadow:
+    0 0 5px #00ffe7,
+    0 0 10px #00ffe7,
+    0 0 20px #00ffe7,
+    0 0 40px #00e0c6,
+    0 0 80px #00a59c;
+  animation: neonPulse 2.5s ease-in-out ;
+}
+@keyframes neonPulse {
+  0% {
+    text-shadow:
+      0 0 5px #00ffe7,
+      0 0 10px #00ffe7,
+      0 0 20px #00ffe7,
+      0 0 40px #00e0c6,
+      0 0 80px #00a59c;
+  }
+  50% {
+    text-shadow:
+      0 0 2px #00ffe7,
+      0 0 4px #00ffe7,
+      0 0 10px #00e0c6,
+      0 0 20px #00a59c,
+      0 0 40px #007d75;
+  }
+  100% {
+    text-shadow:
+      0 0 5px #00ffe7,
+      0 0 10px #00ffe7,
+      0 0 20px #00ffe7,
+      0 0 40px #00e0c6,
+      0 0 80px #00a59c;
+  }
+}
 
-.title{
-    font-size: 6rem;      
-    font-weight: bold;
+.skill-quantities{
+    display: flex;
+    flex-direction: row;      
+    justify-content:center; 
+    width:80%;
+    margin:0 auto;
+    gap:50px;
+    
 }
 
 .skill-progress{
-    width: 40%;
-    height:20px;
-    margin: 10px auto;
-    padding-top: 30px;
-    display: flex;
-    flex-direction: column;      
-    justify-content: flex-start; 
-    
+    width:60%;
 }
+
+.spinner-wrapper{
+    width:40%;
+}
+
+@media (max-width: 1100px) {
+  .skill-quantities {
+    flex-direction: row;   
+    gap: 20px;             
+    width: 98%;            
+    margin: 0 auto;
+  }
+  .skill-progress, .spinner-wrapper {
+    width: 48%;            
+    min-width: 160px;
+  }
+  .title {
+    font-size: 5.0rem;
+    font-weight: bold;
+  }
+}
+
+@media (max-width: 789px) {
+  .skill-quantities {
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+  }
+  .spinner-wrapper{
+    display:none;
+  }
+  .skill-progress{
+    width:90%;
+    margin: 0px 10px 0px  10px;
+    
+  }.title{
+      font-size: 3.5rem;      
+    font-weight: bold;
+  }
+  
+}
+
+
+
+
+
+
+
+
 
 
