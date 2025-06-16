@@ -9,6 +9,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { Observable } from 'rxjs';
 import { map, shareReplay } from 'rxjs/operators';
 import { SocialMediaComponent } from "../social-media/social-media.component";
+import { ActivatedRoute, Router } from '@angular/router';
 
 
 
@@ -23,12 +24,14 @@ import { SocialMediaComponent } from "../social-media/social-media.component";
     MatListModule,
     MatIconModule,
     AsyncPipe,
-    SocialMediaComponent
+    SocialMediaComponent,
+    
 ]
 })
 export class DashboardComponent  {
   private breakpointObserver = inject(BreakpointObserver);
-  
+  activateRoute = inject(ActivatedRoute);
+  router = inject(Router);
 
   isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
     .pipe(
@@ -37,25 +40,31 @@ export class DashboardComponent  {
     );
 
     ngOnInit(){
+        this.activateRoute.fragment.subscribe((fragment:any)=>{
+          let element = document.getElementById(fragment);
+          if(element){
+            element.scrollIntoView({behavior:'smooth',block:'start'})
+          }
+        })
 
     }
+  goToSection(fragment: string) {
+    this.router.navigate(['/']).then(() => {
+      setTimeout(() => {
+        this.router.navigate(['/'], { fragment });
+      }, 100); 
+    });
+  }
+
+
+
 
 
     
 
 
-    navTo(fragment: string) {
-     let element = document.getElementById(fragment);
-     console.log(element);
-      if (element) {
-      element.scrollIntoView({ behavior: 'smooth'
-         
-        });
+    
 
-        
-       
-    }
 
-}
 
 }

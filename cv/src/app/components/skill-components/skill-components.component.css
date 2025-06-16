@@ -1,12 +1,12 @@
 .skill-section{
     width:100%;
-    height:100%;
+    height:100vh;
     
 }
 
 .skill-title{
     color:yellow;
-    margin:20px;
+    margin-bottom:20px;
     display:flex;
     flex-direction:column;
     justify-content:center;

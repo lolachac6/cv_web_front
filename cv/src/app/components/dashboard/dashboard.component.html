@@ -1,39 +1,33 @@
 <mat-sidenav-container class="sidenav-container">
-  <mat-sidenav #drawer class="sidenav" fixedInViewport
-      [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
-      [mode]="(isHandset$ | async) ? 'over' : 'side'"
-      [opened]="(isHandset$ | async) === false">
+  <mat-sidenav #drawer class="sidenav" fixedInViewport [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+    [mode]="(isHandset$ | async) ? 'over' : 'side'" [opened]="(isHandset$ | async) === false">
     <mat-toolbar>Menu</mat-toolbar>
     <mat-nav-list>
-      <a  (click)="navTo('first')" mat-list-item   fragment="first">HOME</a>
-      <a (click)="navTo('aboutme')" mat-list-item   fragment="aboutme">ABOUT ME</a>
-      <a (click)="navTo('skill')" mat-list-item   fragment="skill"> SKILLS</a>
-      <a  (click)="navTo('proyect')" mat-list-item  >MY PROJECTS</a>
-      <a (click)="navTo('contact')" mat-list-item   fragment="contact">CONTACT</a>
-      
-      
+      <a mat-list-item (click)="goToSection('first')">HOME</a>
+      <a mat-list-item (click)="goToSection('aboutme')">ABOUT ME</a>
+      <a mat-list-item (click)="goToSection('skill')">SKILLS</a>
+      <a mat-list-item (click)="goToSection('proyect')">MY PROJECTS</a>
+      <a mat-list-item (click)="goToSection('contact')">CONTACT</a>
+
+
     </mat-nav-list>
     <app-social-media></app-social-media>
-  
+
   </mat-sidenav>
   <mat-sidenav-content>
     <mat-toolbar color="primary">
       @if (isHandset$ | async) {
-        <button
-          type="button"
-          aria-label="Toggle sidenav"
-          mat-icon-button
-          (click)="drawer.toggle()">
-          <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
-        </button>
+      <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()">
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
       }
       <span>
       </span>
       <i class="fa-regular fa-circle-user"></i>
     </mat-toolbar>
     <ng-content></ng-content>
-    
+
 
   </mat-sidenav-content>
-  
+
 </mat-sidenav-container>
