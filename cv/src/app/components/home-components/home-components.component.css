@@ -23,11 +23,10 @@
 }
 
 .Proyect {
-    background: rgb(11, 102, 98);
+    background: rgb(228, 221, 10);
 }
 
 .divFirst {
-  
     display: flex;
     align-items: center;
     justify-content:flex-start;
