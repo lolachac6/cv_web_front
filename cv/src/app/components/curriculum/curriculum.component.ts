@@ -1,5 +1,4 @@
-import { Component, inject } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-curriculum',
@@ -8,8 +7,6 @@ import { ActivatedRoute } from '@angular/router';
   styleUrl: './curriculum.component.css'
 })
 export class CurriculumComponent {
-   
-
-
+ 
 
 }

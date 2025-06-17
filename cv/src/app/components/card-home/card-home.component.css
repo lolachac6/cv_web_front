@@ -69,6 +69,9 @@
   justify-content:space-around;
 
 }
+button{
+  padding:30px;
+}
 
 .short-line {
   width: 60px;           
@@ -103,6 +106,9 @@
     font-size: 4.5rem;
     margin: 20px 0 0 0;
     
+  }
+  button{
+    padding:20px;
   }
  .img-card {
   visibility:hidden;
