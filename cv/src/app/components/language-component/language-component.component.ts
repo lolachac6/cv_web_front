@@ -19,7 +19,7 @@ export class LanguageComponentComponent {
 
 async ngOnInit(){
   try{
-    this.arrSkills = await this.SkillService.getAll();
+    this.arrSkills = await this.SkillService.getAllTechnicalSkills();
   }catch(err){
     console.log(err);
   }

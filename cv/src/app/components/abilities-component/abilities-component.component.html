@@ -1,15 +1,18 @@
 <div class="wrapper-spinner">
-    <div>
-        <mat-progress-spinner class="prueba" mode="determinate" value="80"></mat-progress-spinner>
-        <h3>Angular</h3>
-    </div>
-    <div>
-        <mat-progress-spinner mode="determinate" value="95"></mat-progress-spinner>
-        <h3>Bootstrap</h3>
-    </div>
-    <div>
-        <mat-progress-spinner mode="determinate" value="60"></mat-progress-spinner>
-        <h3>NodeJS</h3>
-    </div>
-   
+  <div class="skills-row">
+    @for (personalSkills of arrPersonalSkill; track personalSkills.id) {
+      <div class="skill-spinner-group">
+        <div class="spinner-container">
+          <mat-progress-spinner
+            [value]="personalSkills.level"
+            mode="determinate"
+            strokeWidth="10"
+            diameter="100">
+          </mat-progress-spinner>
+          <div class="spinner-label">{{personalSkills.level}}%</div>
+        </div>
+        <h3 class="spinner-title">{{personalSkills.name}}</h3>
+      </div>
+    }
+  </div>
 </div>

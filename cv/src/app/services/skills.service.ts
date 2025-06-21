@@ -11,9 +11,15 @@ import { environment } from './../../environments/environment';
 export class SkillsService {
   http = inject(HttpClient);
   private baseUrl : string= environment.apiUrlSkill;
+  private baseUrlPersonal: string = environment.apiUrlSkillPersonal;
 
-  getAll():Promise<ISkill[]>{
+  getAllTechnicalSkills():Promise<ISkill[]>{
     return firstValueFrom(this.http.get<ISkill[]>(this.baseUrl));
   }
+
+  getAllPersonalSkills():Promise<ISkill[]>{
+    return firstValueFrom(this.http.get<ISkill[]>(this.baseUrlPersonal));
+  }
+
   
 }
