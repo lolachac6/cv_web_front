@@ -87,4 +87,15 @@
     font-size: 0.95em;
     padding: 0;
   }
+
+
+  @media(max-width:789px){
+    .cv-title{
+       font-size: 3em;
+    }
+    .cv-filter{
+      display:flex;
+      justify-content:center;
+    }
+  }
 }
