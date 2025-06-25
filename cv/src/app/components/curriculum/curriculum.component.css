@@ -34,9 +34,9 @@
   object-fit: cover;
   border-radius: 50%;
   box-shadow:
-    0 0 8px 2px #00ffe7,
-    0 0 16px 4px #00e0c6,
-    0 0 0 4px rgba(0,255,231,0.08) inset;
+    0 0 8px 2px#fff200,
+    0 0 16px 4px #cde000,
+    0 0 0 4px rgba(204, 255, 0, 0.08) inset;
 }
 
 .cv-content {

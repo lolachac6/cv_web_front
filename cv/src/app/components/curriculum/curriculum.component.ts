@@ -16,7 +16,7 @@ import { FormsModule } from '@angular/forms';
 export class CurriculumComponent {
   curriculumServices = inject(CurriculumService);
   data:string="";
-  jobs: string[] = ["Hospital","Developer","Cook"];
+  jobs: string[] = [ "All jobs","Hospital","Developer","Cook",];
   arrExperience: Icurriculum[]= [];
   arrExperienceFilter:Icurriculum[]=[];
 

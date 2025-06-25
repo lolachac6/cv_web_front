@@ -1,22 +1,27 @@
 <div class="wrapper-cv">
     <div class="cv-title">MY PROFESSIONAL EXPERIENCE</div>
     <div class="cv-filter">
-        <mat-form-field>
-        <mat-label>Select type of Job</mat-label>
-        <mat-select [(ngModel)]="data">
-         @for (job of jobs; track job) {
-            @if(job.includes("Hospital")){
-            <mat-option (click)="content()" [value]="job"><i class="fa-solid fa-user-doctor fa-l" style="color: #06f3ff;"></i>{{job}}</mat-option>
-            }@else if (job.includes("Developer")) {
-                 <mat-option (click)="content()" [value]="job"><i class="fa-solid fa-computer" style="color: #b8ff06;"></i> {{job}}</mat-option>
-            }@else {
-                <mat-option (click)="content()" [value]="job"><i class="fa-solid fa-utensils" style="color: #ff5906;"></i>{{job}}</mat-option>
-            }
-       
-    }
-  </mat-select>
-</mat-form-field>
-        
+        <mat-form-field appearance="fill" style="width: 300px;">
+            <mat-label>Select the job type</mat-label>
+            <mat-select [(ngModel)]="data">
+                @for (job of jobs; track job) {
+                @if(job.includes("Hospital")){
+                <mat-option (click)="content()" [value]="job"><i class="fa-solid fa-user-doctor fa-l"
+                        style="color: #06f3ff;"></i>{{job}}</mat-option>
+                }@else if (job.includes("Developer")) {
+                <mat-option (click)="content()" [value]="job"><i class="fa-solid fa-computer"
+                        style="color: #b8ff06;"></i> {{job}}</mat-option>
+                }@else if (job.includes("Cook")){
+                <mat-option (click)="content()" [value]="job"><i class="fa-solid fa-utensils"
+                        style="color: #ff5906;"></i>{{job}}</mat-option>
+                }@else {
+                <mat-option (click)="content()" [value]="job">{{job}}</mat-option>
+                }
+
+                }
+            </mat-select>
+        </mat-form-field>
+
     </div>
     @if(arrExperienceFilter.length>0){
     @for(experience of this.arrExperienceFilter; track experience.id){
@@ -29,6 +34,8 @@
             <h1>{{experience.title}} <i class="fa-solid fa-user-doctor fa-l" style="color: #06f3ff;"></i></h1>
             }@else if(experience.type.includes("Cook")) {
             <h1>{{experience.title}} <i class="fa-solid fa-utensils" style="color: #ff5906;"></i></h1>
+            }@else{
+            <h1>{{experience.title}} <i class="fa-solid fa-computer " style="color: #b8ff06;"></i></h1>
             }
 
             <h2>{{experience.place}}</h2>
@@ -50,7 +57,9 @@
             @if(experience.type.includes("Hospital")){
             <h1>{{experience.title}} <i class="fa-solid fa-user-doctor fa-l" style="color: #06f3ff;"></i></h1>
             }@else if(experience.type.includes("Cook")) {
-            <h1>{{experience.title}} <i class="fa-solid fa-utensils" style="color: #83ff06;"></i></h1>
+            <h1>{{experience.title}} <i class="fa-solid fa-utensils fa-l" style="color: #ff5906;"></i></h1>
+            }@else if(experience.type.includes("Developer")){
+            <h1>{{experience.title}}<i class="fa-solid fa-computer " style="color: #b8ff06;"></i></h1>
             }
 
             <h2>{{experience.place}}</h2>
