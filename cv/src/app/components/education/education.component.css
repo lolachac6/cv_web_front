@@ -1,0 +1,53 @@
+.w-course{
+    width:1440px;
+    margin-left:150px;
+    margin-top:50px;
+    display:flex;
+    flex-direction:row;
+    justify-content:space-around;
+
+}
+.divButton{
+    justify-content:center;
+   margin:20px;
+}
+
+.divButtonCard{
+    flex:1;
+}
+
+.webCourse{
+    width:40%;
+
+}
+
+.nurseCourse{
+    width:40%;
+}
+
+.titleCard{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:20px;
+}
+
+.cardCourse {
+  transition:
+    transform 0.3s cubic-bezier(.4,2,.6,1),
+    box-shadow 0.3s,
+    border-color 0.3s;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  cursor: pointer;
+  z-index: 1;
+}
+
+.cardCourse:hover,
+.cardCourse:focus-within,
+.cardCourse:active {
+  transform: scale(1.07) translateY(-12px);
+  border: 3px solid;
+  border-image: linear-gradient(90deg, #fff200 60%, #00ffe7 100%) 1;
+  box-shadow: 0 8px 32px 0 rgba(0,255,231,0.25), 0 0 16px #fff200;
+  z-index: 2;
+}
