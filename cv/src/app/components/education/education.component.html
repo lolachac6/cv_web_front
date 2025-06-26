@@ -1,32 +1,45 @@
-<div class="w-course">
-    <div class="webCourse">
-        <mat-card class="cardCourse" (click)="navToWeb()">
-            <mat-card-header class="titleCard" >
-
-                <mat-card-title>Web Development Training </mat-card-title>
-                <mat-card-subtitle>(Certifications & Technical Courses)</mat-card-subtitle>
-            </mat-card-header>
 
 
-            <mat-card-actions class="divButton">
-                <button mat-flat-button class="divButtonCard">SEE MORE...</button>
+    <div class="w-title">
 
-            </mat-card-actions>
-        </mat-card>
+        <h1 class="title">Certifications &  Courses</h1>
     </div>
-    <div class="nurseCourse">
-        <mat-card class="cardCourse">
-            <mat-card-header class="titleCard">
+    <div class="content-course">
+        <div class="webCourse">
+            <mat-card class="cardCourse" (click)="navToWeb()">
+                <mat-card-header class="titleCard">
 
-                <mat-card-title>Nursing education</mat-card-title>
-                <mat-card-subtitle>(Certifications & Technical Courses)</mat-card-subtitle>
-            </mat-card-header>
+                    <mat-card-title>Web Development Training </mat-card-title>
+                    
+                </mat-card-header>
 
 
-            <mat-card-actions class="divButton">
-                <button mat-flat-button class="divButtonCard">SEE MORE...</button>
+                <mat-card-actions class="divButton">
+                    <button mat-flat-button class="divButtonCard">SEE MORE...</button>
 
-            </mat-card-actions>
-        </mat-card>
+                </mat-card-actions>
+            </mat-card>
+        </div>
+        <div class="nurseCourse">
+            <mat-card class="cardCourse">
+                <mat-card-header class="titleCard">
+
+                    <mat-card-title>Nursing education</mat-card-title>
+                    <mat-card-subtitle></mat-card-subtitle>
+                </mat-card-header>
+
+
+                <mat-card-actions class="divButton">
+                    <button mat-flat-button class="divButtonCard">SEE MORE...</button>
+
+                </mat-card-actions>
+            </mat-card>
+        </div>
+
+       
     </div>
-</div>
+    <div class="btn-home">
+            <button mat-stroked-button [routerLink]="'/home'">Back home</button>
+    </div>
+     
+    

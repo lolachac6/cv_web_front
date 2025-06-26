@@ -1,12 +1,13 @@
 import { Component, inject } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
-import { Router } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
+
 
 
 @Component({
   selector: 'app-education',
-  imports: [MatCardModule, MatButtonModule],
+  imports: [MatCardModule, MatButtonModule, RouterLink],
   templateUrl: './education.component.html',
   styleUrls: ['./education.component.css']
 })
@@ -15,7 +16,7 @@ export class EducationComponent {
  
 
 navToWeb(){
-  this.router.navigate(['/skill'])
+  this.router.navigate(['/educationWeb'])
 }
  
 }
