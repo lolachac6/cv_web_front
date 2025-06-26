@@ -6,6 +6,7 @@ import { AboutMeComponentsComponent } from './components/about-me-components/abo
 import { CurriculumComponent } from './components/curriculum/curriculum.component';
 import { SkillComponentsComponent } from './components/skill-components/skill-components.component';
 import { EducationComponent } from './components/education/education.component';
+import { EducationWebComponent } from './components/education-web/education-web.component';
 
 
 
@@ -19,7 +20,8 @@ export const routes: Routes = [
     {path: "aboutMe", component: AboutMeComponentsComponent},
     {path: "skill", component: SkillComponentsComponent},
     {path: "curriculum", component: CurriculumComponent},
-    {path:"education",component: EducationComponent}
+    {path:"education",component: EducationComponent},
+    {path:"educationWeb",component:EducationWebComponent}
 
 ];
 
