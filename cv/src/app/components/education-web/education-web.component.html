@@ -1,1 +1,18 @@
-<p>education-web works!</p>
+@for(courses of this.arrCoursesWeb; track courses.id){
+      <section id={{courses.id}} class="curso-section">
+    <div class="curso-info">
+      <h1>{{courses.title}}</h1>
+      <h3>{{courses.dates}} - {{courses.datesEnd}} </h3>
+      <p><strong>{{courses.hours}} hours</strong></p>
+      <div class="prueba">
+
+          <p class="curso-desc">
+            Skills acquired: {{courses.Skill}}
+          </p>
+      </div>
+      <button (click)="apareceElTitulo(courses.image, courses.id)" class="curso-btn">Ver certificado</button>
+    </div>
+  </section>
+}
+
+  
